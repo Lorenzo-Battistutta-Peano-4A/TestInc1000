@@ -1,3 +1,4 @@
+  
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,7 +11,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author perilli.alberto
+ * @author battistutta.lorenzo
  */
 public class Inc1000 extends Thread{
     private static int cont = 0;
@@ -18,7 +19,7 @@ public class Inc1000 extends Thread{
     @Override
     public void run() {
         for (int i = 0; i < 1000; i++) {
-            cont++;
+            inc1();
             try {
                 Thread.sleep(1);
             } catch (InterruptedException ex) {
@@ -29,5 +30,9 @@ public class Inc1000 extends Thread{
     
     public static int getCont() {
         return cont;
+    }
+    
+    synchronized void inc1() {
+       cont++;
     }
 }

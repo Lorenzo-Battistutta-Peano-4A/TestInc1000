@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,7 +8,7 @@ package testinc1000;
 
 /**
  *
- * @author perilli.alberto
+ * @author battistutta.lorenzo
  */
 public class TestInc1000 {
 
@@ -19,8 +20,8 @@ public class TestInc1000 {
         Inc1000 t1 = new Inc1000();
         Inc1000 t2 = new Inc1000();
         t1.start();
-        t1.join();
         t2.start();
+        t1.join();
         t2.join();
         System.out.println(Inc1000.getCont());
     }
